@@ -1,4 +1,8 @@
-<!doctype html>
+<?php
+ini_set('error_reporting', E_ALL);
+ini_set('display_errors','On');
+
+?><!doctype html>
 <html lang="sv">
   <head>
     <meta charset="utf-8">
@@ -26,19 +30,19 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="swish-roulette">
 
-    <link href="css/screen.css" rel="prefetch">
+    <link href="css/screen.css?nocache=<?php echo(time()); ?>" rel="prefetch">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="js/app.js?cache=<?php echo(time()); ?>"></script>
+    <script src="js/app.js?nocache=<?php echo(time()); ?>"></script>
     <link rel="manifest" href="manifest/manifest.json?v=1">
   </head>
   <body>
 
-    <section class="header">
+    <section id="pageheader">
       <h1>Swish-Roulette</h1>
     </section>
 
-    <section class="body">
+    <!--section id="pagebody">
       
       <aside class="drawn">
         <h2 id="swish-organisation-name">{name}</h2>        
@@ -73,9 +77,9 @@
         <p>Alla samlade Swish 123-nummer kommer från ett litet projekt på Github. Alla nummer har samlats av individer eftersom Swish själva inte tillhandahåller möjligheten att söka eller ta reda på vem/vilka dessa nummer tillhör.</p>
         <p>Läs mer eller bidra här: <a href="https://github.com/cisene/swish-123" target="_blank">Swish-123</a>.</p>
       </aside>
-    </section>
+    </section -->
 
-    <section class="footer">
+    <section id="pagefooter">
       <aside class="disclaimer">Disclaimer: Swish-Roulette har inget att göra med företaget Swish, Swish-Roulette är helt och hållet en skapelse av en privatperson.</aside>
     </section>
 
