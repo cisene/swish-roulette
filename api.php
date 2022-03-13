@@ -50,11 +50,33 @@ if (isset($_SERVER['REQUEST_METHOD'])) {
         break;
     }
   }
+
+  if ($_SERVER['REQUEST_METHOD'] == "OPTIONS") {
+    
+    // OPTIONS /doc HTTP/1.1
+    // Host: bar.other
+    // User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:71.0) Gecko/20100101 Firefox/71.0
+    // Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    // Accept-Language: en-us,en;q=0.5
+    // Accept-Encoding: gzip,deflate
+    // Connection: keep-alive
+    // Origin: https://foo.example
+    // Access-Control-Request-Method: POST
+    // Access-Control-Request-Headers: X-PINGOTHER, Content-Type
+
+    header("Access-Control-Allow-Method: OPTIONS,GET");
+
+    $response_status = 204;
+  }
 }
 
 switch($response_status) {
   case 200:
     $response_status_header = "HTTP/1.1 200 OK";
+    break;
+
+  case 204:
+    $response_status_header = "HTTP/1.1 204 No Content";
     break;
 
   case 400:
@@ -67,7 +89,15 @@ switch($response_status) {
 header($response_status_header);
 if ($response_status == 200) {
   header("Content-Type: application/json; charset=UTF-8");
+  header("Access-Control-Allow-Origin: *");
+
   die($json_response);
+}
+
+if ($response_status == 204) {
+  header("Content-Type: application/json; charset=UTF-8");
+  header("Access-Control-Allow-Origin: *");
+  die("");
 }
 
 header("Content-Type: text/plain");

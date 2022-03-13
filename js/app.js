@@ -1,6 +1,5 @@
 
-var api = '//b19.local/swish-roulette/api';
-var api = '//b19.se/swish-roulette/api';
+var api = '/swish-roulette/api';
 
 var debug = true;
 

@@ -2,26 +2,24 @@
 <html lang="sv">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Swish-Roulette - Spela och donera en slant till slumpvis vald organisation!</title>
 
     <meta name="theme-color" content="#f0f">
     <meta name="theme-color" content="#f0f">
     <meta name="msapplication-TileColor" content="#f0f">
 
-    <meta name="msapplication-TileImage" content="img/icons/mstile-150x150.png?v=1">
-    <link rel="apple-touch-icon" href="img/icons/apple-touch-icon-152x152.png?v=1">
-
-    <link rel="manifest" href="manifest/manifest.json?v=1">
-
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="msapplication-TileImage" content="/favicon/favicon_150x150.jpg?v=1">
+    <link rel="apple-touch-icon" href="/favicon/favicon_192x192.jpg?v=1">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon_32x32.jpg?v=1">
 
     <meta name="description" content="Swish-Roulette, Swisha en slant till någon!">
 
     <meta property="og:title" content="Swish-Roulette">
     <meta property="og:description" content="Swish-Roulette">
-    <meta property="og:image" content="img/shareImage.png">
-    <meta property="og:url" content="https://b19.se/swish-routette/">
+    <meta property="og:image" content="/favicon/favicon_512x512.jpg">
+    <meta property="og:url" content="https://b19.local/swish-routette/">
     <meta property="og:site_name" content="Swish-Roulette">
 
     <meta name="apple-mobile-web-app-capable" content="no">
@@ -30,12 +28,9 @@
 
     <link href="css/screen.css" rel="prefetch">
 
-    <link rel="icon" type="image/png" sizes="32x32" href="img/icons/favicon-32x32.png?v=1">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/icons/favicon-16x16.png?v=1">
-    <link rel="mask-icon" href="img/icons/safari-pinned-tab.svg?v=1" color="#1DAFEC">
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="js/app.js"></script>
+    <script src="js/app.js?cache=<?php echo(time()); ?>"></script>
+    <link rel="manifest" href="manifest/manifest.json?v=1">
   </head>
   <body>
 
